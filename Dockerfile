@@ -22,4 +22,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie todo o conteúdo do diretório local para o contêiner
 COPY . .
 
-CMD ["streamlit", "run", "Conferencia_Servicos.py", "--server.port=8100"]
+EXPOSE 8099
+
+CMD ["streamlit", "run", "Conferencia_Servicos.py", "--server.port=8099"]
